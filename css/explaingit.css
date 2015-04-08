@@ -187,8 +187,8 @@ circle.commit.rebased {
 }
 
 circle.commit.branchless {
-    fill: #FEFEFE;
-    stroke: #DDD;
+    fill: #666633;
+    stroke: #666633;
 }
 
 .commit-pointer {
