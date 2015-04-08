@@ -134,7 +134,7 @@ span.cmd {
 
 .control-box input[type="text"] {
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     padding-left: 15px;
     color: #FFF;
     line-height: 14px;
@@ -203,7 +203,7 @@ circle.commit.branchless {
 
 .commit-pointer.branchless,
 .merge-pointer.branchless {
-    stroke: #DDD;
+    stroke: #666633;
     stroke-width: 2;
 }
 
