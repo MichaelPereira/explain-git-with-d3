@@ -368,12 +368,14 @@ require(['explaingit'], function (explainGit) {
         },
         'revert': {
             name: 'Revert',
-            height: 200,
-            baseLine: 0.5,
+            height: 500,
+            //#baseLine: 0.5,
             commitData: [
-                {id: 'e137e9b'},
-                {id: '0e70093', parent: 'e137e9b'},
-                {id: '3e33afd', parent: '0e70093', tags: ['next']}
+                {id: 'e137e9b', tags: ['origin/next']},
+                {id: '6ce726f', parent: 'e137e9b'},
+                {id: 'bb92e0e', parent: '6ce726f', tags: ['next']},
+                {id: '0cff760', parent: 'e137e9b', tags: ['origin/devp']},
+                {id: '4ed301d', parent: '0cff760', tags: ['devp']}
             ],
             initialMessage: 'Type "git revert 0e70093".'
         },
