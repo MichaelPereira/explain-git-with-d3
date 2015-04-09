@@ -345,7 +345,7 @@ require(['explaingit'], function (explainGit) {
         'reset': {
             name: 'Reset',
             height: 500,
-            //baseLine: 10,
+            baseLine: 0.5,
             commitData: [
                 {id: 'e137e9b', tags: ['origin/next']},
                 {id: '6ce726f', parent: 'e137e9b'},
@@ -353,7 +353,7 @@ require(['explaingit'], function (explainGit) {
                 {id: '0cff760', parent: 'e137e9b', tags: ['origin/devp']},
                 {id: '4ed301d', parent: '0cff760', tags: ['devp']}
             ],
-            initialMessage: 'Type "after a few commit type git reset HEAD^".'
+            initialMessage: 'after a few commit type "git reset HEAD^".'
         },
         'revert': {
             name: 'Revert',
