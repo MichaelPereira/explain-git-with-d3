@@ -299,6 +299,7 @@ define(['d3'], function () {
 
         rebase: function (args) {
             var arg = args.shift();
+            var branchName=""
             switch (arg) {
             case '-p':
                 branchName=args
