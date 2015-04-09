@@ -299,16 +299,16 @@ define(['d3'], function () {
 
         rebase: function (args) {
             var arg = args.shift();
-            var branchName=""
+            var ref="";
             switch (arg) {
             case '-p':
-                branchName=args
+                ref=args.join();
                 break;
             default:
-                branchName=arg
+                ref=arg;
                 break;
             }
-            result = this.historyView.rebase(args);
+            result = this.historyView.rebase(ref);
             if (result === 'Fast-Forward') {
                 this.info('Fast-forwarded to ' + ref + '.');
             }
