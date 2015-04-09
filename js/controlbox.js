@@ -225,7 +225,7 @@ define(['d3'], function () {
 
                 return;
             }
-            
+
             while (args.length > 0) {
                 var arg = args.shift();
 
@@ -298,9 +298,16 @@ define(['d3'], function () {
         },
 
         rebase: function (args) {
-            var ref = args.shift(),
-                result = this.historyView.rebase(ref);
-
+            var arg = args.shift();
+            switch (arg) {
+            case '-p':
+                var remainingArgs = [arg].concat(args);
+                result = this.historyView.rebase(remainingArgs);
+                break;
+            default:
+                result = this.historyView.rebase(arg);
+                break;
+            }
             if (result === 'Fast-Forward') {
                 this.info('Fast-forwarded to ' + ref + '.');
             }
