@@ -301,12 +301,13 @@ define(['d3'], function () {
             var arg = args.shift();
             switch (arg) {
             case '-p':
-                result = this.historyView.rebase(args);
+                branchName=args
                 break;
             default:
-                result = this.historyView.rebase(arg);
+                branchName=arg
                 break;
             }
+            result = this.historyView.rebase(args);
             if (result === 'Fast-Forward') {
                 this.info('Fast-forwarded to ' + ref + '.');
             }
