@@ -17,20 +17,7 @@
 <div class="container">
   <div class="row intro">
     <div class="twelvecol">
-      <h1>Visualizing Git Concepts with D3</h1>
-      <p>
-        This website is designed to help you understand some basic git concepts visually.
-        This is my first attempt at using both SVG and D3. I hope it is helpful to you.
-      </p>
-      <p>
-        Adding/staging your files for commit will not be covered by this site. In all sandbox playgrounds
-        on this site, just pretend that you always have files staged and ready to commit at all times.
-        If you need a refresher on how to add or stage files for commit, please read
-        <a href="http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository">Git Basics</a>.
-      </p>
-      <p>
-        Sandboxes are split by specific git commands, listed below.
-      </p>
+      <h1>Syncsort git hands-on demo</h1>
     </div>
   </div>
   <div class="row command-list">
@@ -357,14 +344,16 @@ require(['explaingit'], function (explainGit) {
         },
         'reset': {
             name: 'Reset',
-            height: 200,
-            baseLine: 0.5,
+            height: 500,
+            baseLine: 10,
             commitData: [
-                {id: 'e137e9b'},
-                {id: '0e70093', parent: 'e137e9b'},
-                {id: '3e33afd', parent: '0e70093', tags: ['next']}
+                {id: 'e137e9b', tags: ['origin/next']},
+                {id: '6ce726f', parent: 'e137e9b'},
+                {id: 'bb92e0e', parent: '6ce726f', tags: ['next']},
+                {id: '0cff760', parent: 'e137e9b', tags: ['origin/devp']},
+                {id: '4ed301d', parent: '0cff760', tags: ['devp']}
             ],
-            initialMessage: 'Type "git reset HEAD^".'
+            initialMessage: 'Type "after a few commit type git reset HEAD^".'
         },
         'revert': {
             name: 'Revert',
