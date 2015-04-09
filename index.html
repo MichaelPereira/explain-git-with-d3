@@ -372,13 +372,15 @@ require(['explaingit'], function (explainGit) {
             name: 'Merge',
             height: 500,
             commitData: [
-                {id: 'e137e9b'},
-                {id: 'bb92e0e', parent: 'e137e9b', tags: ['next']},
-                {id: 'f5b32c8', parent: 'e137e9b', tags: ['ff']},
-                {id: 'e088135', parent: 'f5b32c8', tags: ['devp']}
+                {id: 'e137e9b', tags: ['origin/next']},
+                {id: '6ce726f', parent: 'e137e9b'},
+                {id: 'bb92e0e', parent: '6ce726f', tags: ['next']},
+                {id: 'cdsf45f', parent: 'bb92e0e'},
+                {id: 'd46f4ha', parent: 'cdsf45f', tags: ['DMX_feature']},
+                {id: '0cff760', parent: 'e137e9b', tags: ['origin/devp']},
+                {id: '4ed301d', parent: '0cff760', tags: ['devp']}
             ],
             initialMessage:
-                'Type "git merge dev".'
         },
         'rebase': {
             name: 'Rebase',
