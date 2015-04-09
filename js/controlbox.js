@@ -308,7 +308,7 @@ define(['d3'], function () {
                 ref=arg;
                 break;
             }
-            result = this.historyView.rebase(ref);
+            var result = this.historyView.rebase(ref);
             if (result === 'Fast-Forward') {
                 this.info('Fast-forwarded to ' + ref + '.');
             }
