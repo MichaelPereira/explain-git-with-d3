@@ -301,8 +301,7 @@ define(['d3'], function () {
             var arg = args.shift();
             switch (arg) {
             case '-p':
-                var remainingArgs = [arg].concat(args);
-                result = this.historyView.rebase(remainingArgs);
+                result = this.historyView.rebase(args);
                 break;
             default:
                 result = this.historyView.rebase(arg);
