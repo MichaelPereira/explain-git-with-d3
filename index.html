@@ -109,7 +109,7 @@
       <p>
         <span class="cmd">git checkout</span> has many uses,
         but the main one is to switch between branches.</br>
-        For example, to switch from master branch to dev branch,
+        For example, to switch from next branch to dev branch,
         I would type <span class="cmd">git checkout dev</span>.
         After that, if I do a git commit, notice where it goes. Try it.
       </p>
@@ -230,7 +230,7 @@
       <p>
         One simple example of the use of <span class="cmd">git reset</span> is to completely restore your local repository
         state to that of the origin.</br>
-        You can do so by typing <span class="cmd">git reset origin/master</span>.
+        You can do so by typing <span class="cmd">git reset origin/next</span>.
       </p>
       <p>
         Note that this won't delete untracked files, you will have to delete those separately with
@@ -241,10 +241,10 @@
     <div id="ExplainGitFetchRebase-Container" class="twelvecol concept-container">
       <p>
         Below is a situation in which you are working in a local branch that is all your own. You want to receive the latest code
-        from the origin server's master branch. To update your local branch, you can do it without having to switch branches!
+        from the origin server's next branch. To update your local branch, you can do it without having to switch branches!
       </p>
       <p>
-        First do a <span class="cmd">git fetch</span>, then type <span class="cmd">git rebase origin/master</span>!
+        First do a <span class="cmd">git fetch</span>, then type <span class="cmd">git rebase origin/next</span>!
       </p>
       <div class="playground-container"></div>
     </div>
@@ -466,7 +466,7 @@ require(['explaingit'], function (explainGit) {
                 {id: '0e70093', parent: 'e137e9b'},
                 {id: '3e33afd', parent: '0e70093', tags: ['next']}
             ],
-            initialMessage: 'Type "git reset origin/master".'
+            initialMessage: 'Type "git reset origin/next".'
         },
         'fetchrebase': {
             name: 'FetchRebase',
@@ -493,7 +493,7 @@ require(['explaingit'], function (explainGit) {
             commitData: [
                 {id: 'e137e9b'},
                 {id: 'bb92e0e', parent: 'e137e9b'},
-                {id: 'd25ee9b', parent: 'bb92e0e', tags: ['master']},
+                {id: 'd25ee9b', parent: 'bb92e0e', tags: ['next']},
                 {id: '071ff28', parent: 'e137e9b', tags: ['protoss']},
                 {id: 'f5b32c8', parent: 'bb92e0e'},
                 {id: 'e088135', parent: 'f5b32c8', tags: ['zerg']},
@@ -508,7 +508,7 @@ require(['explaingit'], function (explainGit) {
             name: 'Free',
             height: 500,
             commitData: [
-                {id: 'e137e9b', tags: ['origin/master', 'next']}
+                {id: 'e137e9b', tags: ['origin/next', 'next']}
             ],
             originData: [
                 {id: 'e137e9b'},
@@ -523,12 +523,12 @@ require(['explaingit'], function (explainGit) {
 
     window.addEventListener('hashchange', open, false);
     window.addEventListener('load', open, false);
-    
+
     function open() {
         var hash = window.location.hash.substr(1),
             linkId = 'open-' + hash,
             example = examples[hash];
-        
+
         if (example) {
             explainGit.reset();
             document.getElementById(linkId).classList.add('selected');
@@ -540,14 +540,14 @@ require(['explaingit'], function (explainGit) {
               elements[i].style.display = 'none';
             }
             document.getElementById('fork-me').style.display = 'none';
-            
+
             explainGit.reset();
 
             explainGit.open({
                 name: 'Zen',
                 height: '100%',
                 commitData: [
-                    {id: 'e137e9b', tags: ['master']}
+                    {id: 'e137e9b', tags: ['next']}
                 ],
                 initialMessage:
                     'Have fun.'
