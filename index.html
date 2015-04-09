@@ -314,7 +314,7 @@ require(['explaingit'], function (explainGit) {
             height: 200,
             baseLine: 0.4,
             commitData: [
-                {id: 'e137e9b', tags: ['master']}
+                {id: 'e137e9b', tags: ['next']}
             ],
             initialMessage: 'Type git commit a few times.'
         },
@@ -322,14 +322,14 @@ require(['explaingit'], function (explainGit) {
             name: 'Branch',
             baseLine: 0.6,
             commitData: [
-                {id: 'e137e9b', tags: ['master']}
+                {id: 'e137e9b', tags: ['next']}
             ]
         },
         'tag': {
             name: 'Tag',
             baseLine: 0.6,
             commitData: [
-                {id: 'e137e9b', tags: ['master']}
+                {id: 'e137e9b', tags: ['next']}
             ]
         },
         'checkout': {
@@ -337,8 +337,8 @@ require(['explaingit'], function (explainGit) {
             height: 500,
             commitData: [
                 {id: 'e137e9b'},
-                {id: 'bb92e0e', parent: 'e137e9b', tags: ['master']},
-                {id: 'e088135', parent: 'e137e9b', tags: ['dev']}
+                {id: 'bb92e0e', parent: 'e137e9b', tags: ['next']},
+                {id: 'e088135', parent: 'e137e9b', tags: ['devp']}
             ],
             initialMessage:
                 'Use git checkout, git branch, and git commit commands until you understand.'
@@ -349,8 +349,8 @@ require(['explaingit'], function (explainGit) {
             commitData: [
                 {id: 'e137e9b'},
                 {id: 'f5b32c8', parent: 'e137e9b'},
-                {id: 'bb92e0e', parent: 'f5b32c8', tags: ['master']},
-                {id: 'e088135', parent: 'e137e9b', tags: ['dev']}
+                {id: 'bb92e0e', parent: 'f5b32c8', tags: ['next']},
+                {id: 'e088135', parent: 'e137e9b', tags: ['devp']}
             ],
             initialMessage:
                 'Use git checkout -b and git commit commands until you understand.'
@@ -362,7 +362,7 @@ require(['explaingit'], function (explainGit) {
             commitData: [
                 {id: 'e137e9b'},
                 {id: '0e70093', parent: 'e137e9b'},
-                {id: '3e33afd', parent: '0e70093', tags: ['master']}
+                {id: '3e33afd', parent: '0e70093', tags: ['next']}
             ],
             initialMessage: 'Type "git reset HEAD^".'
         },
@@ -373,7 +373,7 @@ require(['explaingit'], function (explainGit) {
             commitData: [
                 {id: 'e137e9b'},
                 {id: '0e70093', parent: 'e137e9b'},
-                {id: '3e33afd', parent: '0e70093', tags: ['master']}
+                {id: '3e33afd', parent: '0e70093', tags: ['next']}
             ],
             initialMessage: 'Type "git revert 0e70093".'
         },
@@ -382,9 +382,9 @@ require(['explaingit'], function (explainGit) {
             height: 500,
             commitData: [
                 {id: 'e137e9b'},
-                {id: 'bb92e0e', parent: 'e137e9b', tags: ['master']},
+                {id: 'bb92e0e', parent: 'e137e9b', tags: ['next']},
                 {id: 'f5b32c8', parent: 'e137e9b', tags: ['ff']},
-                {id: 'e088135', parent: 'f5b32c8', tags: ['dev']}
+                {id: 'e088135', parent: 'f5b32c8', tags: ['devp']}
             ],
             initialMessage:
                 'Type "git merge dev".'
@@ -394,32 +394,32 @@ require(['explaingit'], function (explainGit) {
             height: 500,
             commitData: [
                 {id: 'e137e9b'},
-                {id: 'bb92e0e', parent: 'e137e9b', tags: ['master']},
+                {id: 'bb92e0e', parent: 'e137e9b', tags: ['next']},
                 {id: 'f5b32c8', parent: 'e137e9b'},
                 {id: 'e088135', parent: 'f5b32c8', tags: ['dev']}
             ],
             currentBranch: 'dev',
             initialMessage:
-                'Type "git rebase master".'
+                'Type "git rebase next".'
         },
         'fetch': {
             name: 'Fetch',
             height: 500,
             commitData: [
-                {id: 'e137e9b', tags: ['origin/master']},
+                {id: 'e137e9b', tags: ['origin/next']},
                 {id: '6ce726f', parent: 'e137e9b'},
-                {id: 'bb92e0e', parent: '6ce726f', tags: ['master']},
-                {id: '0cff760', parent: 'e137e9b', tags: ['origin/dev']},
-                {id: '4ed301d', parent: '0cff760', tags: ['dev']}
+                {id: 'bb92e0e', parent: '6ce726f', tags: ['next']},
+                {id: '0cff760', parent: 'e137e9b', tags: ['origin/devp']},
+                {id: '4ed301d', parent: '0cff760', tags: ['devp']}
             ],
             originData: [
                 {id: 'e137e9b'},
                 {id: '7eb7654', parent: 'e137e9b'},
                 {id: '090e2b8', parent: '7eb7654'},
-                {id: 'ee5df4b', parent: '090e2b8', tags: ['master']},
+                {id: 'ee5df4b', parent: '090e2b8', tags: ['next']},
                 {id: '0cff760', parent: 'e137e9b'},
                 {id: '2f8d946', parent: '0cff760'},
-                {id: '29235ca', parent: '2f8d946', tags: ['dev']}
+                {id: '29235ca', parent: '2f8d946', tags: ['devp']}
             ],
             initialMessage:
                 'Carefully compare the commit IDs between the origin and the local repository. ' +
@@ -429,14 +429,14 @@ require(['explaingit'], function (explainGit) {
             name: 'Pull',
             height: 500,
             commitData: [
-                {id: 'e137e9b', tags: ['origin/master']},
-                {id: '46d095b', parent: 'e137e9b', tags: ['master']}
+                {id: 'e137e9b', tags: ['origin/next']},
+                {id: '46d095b', parent: 'e137e9b', tags: ['next']}
             ],
             originData: [
                 {id: 'e137e9b'},
                 {id: '7eb7654', parent: 'e137e9b'},
                 {id: '090e2b8', parent: '7eb7654'},
-                {id: 'ee5df4b', parent: '090e2b8', tags: ['master']}
+                {id: 'ee5df4b', parent: '090e2b8', tags: ['next']}
             ],
             initialMessage:
                 'Carefully compare the commit IDs between the origin and the local repository. ' +
@@ -446,12 +446,12 @@ require(['explaingit'], function (explainGit) {
             name: 'Push',
             height: 500,
             commitData: [
-                {id: 'e137e9b', tags: ['origin/master']},
-                {id: '46d095b', parent: 'e137e9b', tags: ['master']}
+                {id: 'e137e9b', tags: ['origin/next']},
+                {id: '46d095b', parent: 'e137e9b', tags: ['next']}
             ],
             originData: [
                 {id: 'e137e9b'},
-                {id: '7eb7654', parent: 'e137e9b', tags: ['master']}
+                {id: '7eb7654', parent: 'e137e9b', tags: ['next']}
             ],
             initialMessage:
                 'Carefully compare the commit IDs between the origin and the local repository. ' +
@@ -462,9 +462,9 @@ require(['explaingit'], function (explainGit) {
             height: 200,
             baseLine: 0.4,
             commitData: [
-                {id: 'e137e9b', tags: ['origin/master']},
+                {id: 'e137e9b', tags: ['origin/next']},
                 {id: '0e70093', parent: 'e137e9b'},
-                {id: '3e33afd', parent: '0e70093', tags: ['master']}
+                {id: '3e33afd', parent: '0e70093', tags: ['next']}
             ],
             initialMessage: 'Type "git reset origin/master".'
         },
@@ -472,7 +472,7 @@ require(['explaingit'], function (explainGit) {
             name: 'FetchRebase',
             height: 500,
             commitData: [
-                {id: 'e137e9b', tags: ['origin/master', 'master']},
+                {id: 'e137e9b', tags: ['origin/next', 'next']},
                 {id: '46d095b', parent: 'e137e9b'},
                 {id: 'dccdc4d', parent: '46d095b', tags: ['my-branch']}
             ],
@@ -481,10 +481,10 @@ require(['explaingit'], function (explainGit) {
                 {id: 'e137e9b'},
                 {id: '7eb7654', parent: 'e137e9b'},
                 {id: '090e2b8', parent: '7eb7654'},
-                {id: 'ee5df4b', parent: '090e2b8', tags: ['master']}
+                {id: 'ee5df4b', parent: '090e2b8', tags: ['next']}
             ],
             initialMessage:
-                'First type "git fetch". Then type "git rebase origin/master".'
+                'First type "git fetch". Then type "git rebase origin/next".'
         },
         'deletebranches': {
             name: 'DeleteBranches',
@@ -508,13 +508,13 @@ require(['explaingit'], function (explainGit) {
             name: 'Free',
             height: 500,
             commitData: [
-                {id: 'e137e9b', tags: ['origin/master', 'master']}
+                {id: 'e137e9b', tags: ['origin/master', 'next']}
             ],
             originData: [
                 {id: 'e137e9b'},
                 {id: '7eb7654', parent: 'e137e9b'},
                 {id: '090e2b8', parent: '7eb7654'},
-                {id: 'ee5df4b', parent: '090e2b8', tags: ['master']}
+                {id: 'ee5df4b', parent: '090e2b8', tags: ['next']}
             ],
             initialMessage:
                 'Have fun.'
